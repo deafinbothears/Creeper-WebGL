@@ -24,15 +24,15 @@
         var colladaScene = CubicVR.loadCollada("collada/creeper.dae","creeper/");
         
         // need to know it's name in the default scene
-        var duckMesh = colladaScene.getSceneObject("creeperBody").obj;
+        var creeperMesh = colladaScene.getSceneObject("creeperBody").obj;
         
         // SceneObject container for the mesh
-        var duckObject = new CubicVR.SceneObject(duckMesh);
+        var creeperObject = new CubicVR.SceneObject(creeperMesh);
 		
-		duckObject.scale = [15, 15, 15,];
+		creeperObject.scale = [15, 15, 15,];
         
         // Add SceneObject containing the mesh to the scene
-        scene.bindSceneObject(duckObject);
+        scene.bindSceneObject(creeperObject);
         
         // set initial camera position and target
         scene.camera.position = [100, 100, 100];
